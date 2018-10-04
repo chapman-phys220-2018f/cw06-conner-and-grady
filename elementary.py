@@ -47,16 +47,16 @@ class Electron(ChargedParticle):
     """Electron is a subclass of chargedparticle. All instances of electron have a charge of -1.60217662e-19 coulombs and a mass of 9.10938356e-31 kilograms."""    
     
     def __init__(self, x, y, z):
-        self.charge = -scipy.constants.e
         super(ChargedParticle,self).__init__(x, y, z)
+        self.charge = -scipy.constants.e
         self.mass = scipy.constants.m_e
     
 class Proton(ChargedParticle):
     """Proton is a subclass of chargedparticle. All instances of proton have a charge of 1.60217662e-19 coulombs and a mass of 1.6726219e-27 kilograms."""
     
     def __init__(self, x, y, z):
-        self.charge = scipy.constants.e
         super(ChargedParticle,self).__init__(x, y, z)
+        self.charge = scipy.constants.e
         self.mass = scipy.constants.m_p
     
 def main(argv):
